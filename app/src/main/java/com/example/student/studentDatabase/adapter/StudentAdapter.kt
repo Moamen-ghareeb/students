@@ -17,8 +17,8 @@ class StudentAdapter (private val onItemClicked: (Student) -> Unit)
         : RecyclerView.ViewHolder(binding.root){
         fun bind(student: Student) {
             binding.apply {
-                studentName.text=student.name.toString()
-                studentGrade.text=student.grade.toString()
+                studentName.text=student.name
+                studentGrade.text=student.grade
             }
         }
     }
