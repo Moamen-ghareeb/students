@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Student</string>
+    <string name="add_student_fragment_title">Add Item</string>
+    <string name="edit_student_fragment_title">Edit Item</string>
+    <string name="delete_question">delete question</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".student.ui.StudentListFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/student_recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16sp"
+            android:padding="8dp"
+            android:scrollbars="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/studint_list" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add"
+            android:backgroundTint="#EA8E08"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:contentDescription="add_student"
+            android:elevation="16sp"
+            android:src="@android:drawable/ic_menu_add" />
+
+
+    </FrameLayout>
+</layout>

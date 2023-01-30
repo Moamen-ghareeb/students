@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/StudentListFragment">
+
+    <fragment
+        android:id="@+id/StudentListFragment"
+        android:name="com.example.student.studentDatabase.ui.StudentListFragment"
+        android:label="StudentListFragment"
+        tools:layout="@layout/fragment_student_list">
+        <action
+            android:id="@+id/action_StudentListFragment_to_StudentDetailFragment"
+            app:destination="@id/StudentDetailFragment" />
+        <action
+            android:id="@+id/action_StudentListFragment_to_studentAddFragment"
+            app:destination="@id/studentAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/StudentDetailFragment"
+        android:name="com.example.student.studentDatabase.ui.StudentDetailFragment"
+        android:label="StudentDetailFragment"
+        tools:layout="@layout/fragment_student_detail">
+        <action
+            android:id="@+id/action_StudentDetailFragment_to_studentAddFragment"
+            app:destination="@id/studentAddFragment" />
+        <argument
+            android:name="student_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentAddFragment"
+        android:name="com.example.student.studentDatabase.ui.StudentAddFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_student_add">
+        <action
+            android:id="@+id/action_studentAddFragment_to_StudentListFragment"
+            app:destination="@id/StudentListFragment" />
+        <argument
+            android:name="studentId"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
